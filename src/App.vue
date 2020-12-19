@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Nav />
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Nav from "@/components/Nav.vue";
+import "tailwindcss/tailwind.css";
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "App",
+  components: {
+    Nav
+  }
+});
+</script>
 
 <style>
 #app {
